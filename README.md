@@ -3,7 +3,7 @@
 </p>
 
 <h1 align = "center">Virtual Machine Network in Microsoft Azure</h1>
-This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azure.
+This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azure and doing some exercises observing traffic.
 
 <br />
 
@@ -99,5 +99,30 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 
 <br />
 
-<h2>Excercise</h2>
+<h2>Observing Traffic in Virtual Machines</h2>
+
+<h3>Observing ICMP (Internet Control Message Protocol) traffic</h3>
+
+<p>
+  <ul>
+    <li>First, download <a href="https://www.wireshark.org/download.html">Wireshark</a> in your VM. Downloads may be slow depending on your VM's CPU</li>
+    <li>Once installed, open Wireshark and start capturing packets (the blue fin icon). In the filter bar, type <b>icmp</b> to filter incoming ICMP packets</li>
+    <ul>
+      <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/08260fcb-734a-48fd-b202-c863b9306ab6" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    </ul>
+    <li>Back to your physical desktop, head to your Microsoft Azure Account obtain the <b>Private IP Address</b> of VM-2 and copy it</li>
+    <ul>
+    <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/14f48437-5d89-417a-b4b5-218fd845fa54" height="50%" width="50%" alt="Disk Sanitization Steps"/></li>
+    </ul>
+    <li>Open up <b>Windows Powershell</b> in VM-1 and in the command line enter <b>ping</b> and the private IP of VM-2. Once done, ICMP packets should now display in Wireshark</li>
+    <ul>
+    <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/a5bd2c40-4a1f-490d-90a0-3155ff281c89" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    </ul>
+    <li>We will now start a perpetual / non-stop ping between the Virtual Machines by entering <b>ping</b> then the private IP of VM-2 followed by <b>-t</b> causing nonstop ICMP packets displaying in Wireshark</li>
+    <ul>
+    <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/474bfaac-5695-43dc-9f55-63d2ded0ccba" height="50%" width="50%" alt="Disk Sanitization Steps"/></li>
+    </ul>
+    <li>Heading back to the Microsoft Azure Account, we'll go to the VM-2's <b>Network Security Group (NSG)</b> which should be named <i>VM-2-nsg</i></li>
+  </ul>
+</p>
 
