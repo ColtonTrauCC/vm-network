@@ -161,3 +161,32 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 </p>
 
 <br />
+
+<h3>Observing DNS (Domain Name System) Traffic</h3>
+
+<p>
+  <ul>
+    <li>Filter DNS traffic in Wireshark by entering <b>dns</b> in the filter bar</li>
+    <li>In Powershell, type in <b>nslookup</b> and a website such as google.com</li>
+  </ul>
+</p>
+
+<h3>Observing RDP (Remote Desktop Protocol) Traffic</h3>
+
+<p>
+  <ul>
+    <li>Filter RDP traffic in Wireshark by entering <b>dns</b> in the filter bar and you'll notice non-stop traffic</li>
+    <li>This is because the RDP is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted</li>
+  </ul>
+</p>
+
+<br/>
+
+<h2>Clean Up</h2>
+<ul>
+  <li>Log off Remote Desktop Connection</li>
+  <li>It is advise to delete your Resource Group and VMs after finishing tinkering with them to prevent future costs, deletion of assets on Azure require verification by entering the name of the asset. Also to note, the Resource Group <b>NetworkWatcherRG</b> is created when creating NSGs for Virutal Machines and requires its own deletion</li>
+  <ul>
+  <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/0f329b9c-4f52-4d9e-96ff-7aa33445cab6" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+  </ul>
+</ul>
