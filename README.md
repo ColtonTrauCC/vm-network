@@ -47,26 +47,29 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
           <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/89c6d771-64e6-495f-959c-640e482cc8a2" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
         </ul>
       </ul>
-
-    <li>Virtual Machine 1 using Windows 10</li>
-      <ul>
+    <li><b>Virtual Machine 1 using Windows 10</b></li>
+    <ul>
       <li>Through <b>Azure Services</b>, go to <b>Virtual Machines</b> to create an Azure Virtual Machine. Select the Resource group we've created (RG-VM) and name the virtual machine <b>VM-1</b>. Make sure the <b>Region</b> is the same as your Resource Group and we'll set our <b>Availability Options</b> set to <i>No infrastructure</i> and <b>Security Type</b> to <i>Standard</i> for this tutorial</li>
       <li>Set the <b>Image</b> (our Operating System) to <i>Windows 10 Pro, Version 22H2, x64 Gen2</i></li>
       <li>The <b>Size</b> selected dicates the general processing power and RAM of our VM, for this tutorial we'll set it to <i>Standard_E2s_V3</i> which provides 2 virtual CPUs and 16 GBs of RAM</li>
-        <ul>
-          <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/be86a82d-db6c-4d45-9961-9acc61c2aadb" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
-        </ul>
-      <li></li>
-      </ul>
-  </ul>
-  
-        
-    <li>Virtual Machine 2 using Ubuntu</li>
       <ul>
-      <li></li>
+        <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/be86a82d-db6c-4d45-9961-9acc61c2aadb" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
       </ul>
-    
-
+      <li>Set the username and password of your VM for logging in and make sure to check the box for licensing agreement</li>
+      <ul>
+        <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/f4aedc00-a714-438b-bd34-5ca68694795e" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+      </ul>
+      <li>Go to the <b>Network</b> tab and notice the <b>Virtual Network</b> created by the Virtual Machine as it should've been made by the Resource Group. It will be made automatically by the Virtual Machine</li>
+      <ul>
+        <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/3d2688ab-110e-41cd-b60d-7c5772ccd480" height="80%" width="80%"></li>
+      </ul>
+      <li>Then head to the <b>Review + Create</b> and click on <b>Create</b> to deploy your Virtual Machine. Give it some time to fully deploy before moving on.</li>
+    </ul>
+    <li><b>Virtual Machine 2 using Ubuntu</b></li>
+    <ul>
+      <li></li>
+    </ul>
+  </ul>
 </p>
 
 <br />
@@ -76,6 +79,7 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 <p>
   <ul>
    <li></li>
+  </ul>
 </p>
 
 <br />
