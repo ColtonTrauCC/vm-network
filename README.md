@@ -1,8 +1,8 @@
 <p align="center">
-<img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/2cb238ff-4e46-4a75-8967-7ef5d124ab74" height="30%" width="30%" alt="Microsoft Azure logo"/>
+<img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/2cb238ff-4e46-4a75-8967-7ef5d124ab74" height="15%" width="15%" alt="Microsoft Azure logo"/>
 </p>
 
-<h1 align = "center">Virtual Machine Network</h1>
+<h1 align = "center">Virtual Machine Network in Microsoft Azure</h1>
 This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azure.
 
 <br />
@@ -11,7 +11,7 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 
 <ul>
   <li>Microsoft Azure (Virtual Machines/Compute)</li>
-  <li>Remote Desktop</li>
+  <li>Microsoft Remote Desktop</li>
 </ul>
 
 </br>
@@ -31,18 +31,52 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
   <ul>
     <li>For MacOS users, follow <a href = "https://www.youtube.com/watch?v=0lllpAhgAJs&ab_channel=TheHostingVideos">this video</a> to use Remote Desktop on Mac</li>
   </ul>
+  <li>(OPTIONAL): Notepad for typing down log in information for our Virtual Machines</li>
 </ol>
 
 <h2>Installation Steps</h2>
 
-<h3>Resource Group</h3>
+<h3>Creating our Resource Group and Virtual Machines</h3>
+
+<p>
+  <ul>
+    <li><b>Resource Group</b></li>
+      <ul>
+       <li>Through <b>Azure Services</b>, go to <b>Resource groups</b> to create a Resource Group and name your Resource Group <b>RG-VM</b>. Take note of the <b>Region</b> of your Resouce Group as it'll come in play when setting up our VMs. Once done, then click on <b>Review + Create</b></li>
+        <ul>
+          <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/89c6d771-64e6-495f-959c-640e482cc8a2" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+        </ul>
+      </ul>
+
+    <li>Virtual Machine 1 using Windows 10</li>
+      <ul>
+      <li>Through <b>Azure Services</b>, go to <b>Virtual Machines</b> to create an Azure Virtual Machine. Select the Resource group we've created (RG-VM) and name the virtual machine <b>VM-1</b>. Make sure the <b>Region</b> is the same as your Resource Group and we'll set our <b>Availability Options</b> set to <i>No infrastructure</i> and <b>Security Type</b> to <i>Standard</i> for this tutorial</li>
+      <li>Set the <b>Image</b> (our Operating System) to <i>Windows 10 Pro, Version 22H2, x64 Gen2</i></li>
+      <li>The <b>Size</b> selected dicates the general processing power and RAM of our VM, for this tutorial we'll set it to <i>Standard_E2s_V3</i> which provides 2 virtual CPUs and 16 GBs of RAM</li>
+        <ul>
+          <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/be86a82d-db6c-4d45-9961-9acc61c2aadb" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+        </ul>
+      <li></li>
+      </ul>
+  </ul>
+  
+        
+    <li>Virtual Machine 2 using Ubuntu</li>
+      <ul>
+      <li></li>
+      </ul>
+    
+
+</p>
+
+<br />
+
+<h3></h3>
 
 <p>
   <ul>
    <li></li>
-  </ul>
 </p>
-
 
 <br />
 
