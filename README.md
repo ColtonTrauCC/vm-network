@@ -19,7 +19,7 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 <h2>Operating Systems Used </h2>
 <ul>
   <li>Windows 10 (21H2)</li>
-  <li>Ubuntu</li>
+  <li>Linux (Ubuntu 20.04)</li>
 </ul>
 
 </br>
@@ -101,11 +101,20 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 
 <h2>Observing Traffic in Virtual Machines</h2>
 
-<h3>Observing ICMP (Internet Control Message Protocol) traffic</h3>
+<h3>Download and Install Wireshark</h3>
 
 <p>
   <ul>
     <li>First, download <a href="https://www.wireshark.org/download.html">Wireshark</a> in your VM. Downloads may be slow depending on your VM's CPU</li>
+  </ul>
+</p>
+
+<br />
+
+<h3>Observing ICMP (Internet Control Message Protocol) Traffic</h3>
+
+<p>
+  <ul>
     <li>Once installed, open Wireshark and start capturing packets (the blue fin icon). In the filter bar, type <b>icmp</b> to filter incoming ICMP packets</li>
     <ul>
       <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/08260fcb-734a-48fd-b202-c863b9306ab6" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
@@ -123,7 +132,7 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
     <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/474bfaac-5695-43dc-9f55-63d2ded0ccba" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
     </ul>
     <li>Heading back to the Microsoft Azure Account, we'll go to the VM-2's <b>Network Security Group (NSG)</b> (which should be named <i>VM-2-nsg</i>) in order to halt the traffic</li>
-    <li>In VM-2-nsg, we'll go to <b>inbound security rules</b> and create a security rule that denies ICMPs. Click on <b>Add</b> to open a right side pop up to set the rule and dot in <b>ICMP</b> under Protocol. Set the Priority higher than 300 (priorities are inversely proportional meaning lower numbers have higher priority) and name the rule <b>DENY_ICMP_PING</b> then click <b>Add</b> to finish</li>
+    <li>In VM-2-nsg, we'll go to <b>inbound security rules</b> and create a security rule that denies ICMPs. Click on <b>Add</b> to open a right side pop up to set the rule and dot in <b>Deny</b> under action and <b>ICMP</b> under Protocol. Set the Priority higher than 300 (priorities are inversely proportional meaning lower numbers have higher priority) and name the rule <b>DENY_ICMP_PING</b> then click <b>Add</b> to finish</li>
     <ul>
     <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/1d628322-94f9-479f-ad6d-cb2d2e3b6dba" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
     </ul>
@@ -131,6 +140,24 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
     <ul>
     <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/e7f22595-3c67-40e5-83a2-6344027b80a5" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
     </ul>
+    <li>To reinstate the traffic, simply head back to your Microsoft Azure Account and set the DENY_ICMP_PING inbound rule's action to <b>Allow</b> and save</li>
   </ul>
 </p>
 
+<br />
+
+<h3>Observing SSH (Secure Shell) Traffic</h3>
+
+<p>
+<ul>
+  <li>In Windows Powershell inside VM-1, type in <b>ssh VM-2@[VM-2's Private IP]</b> then hit Enter, enter in "yes" and it will ask for the password for VM-2</li>
+  <li>Since we are accessing the Terminal of VM-2 (essentially Linux's version of a command prompt) it doesn't diplay input/dots when typing a password but do know it is registering input when typing</li>
+  <li>Once logged in, you will be connected to the Terminal of VM-2. You can exit by entering the command <b>exit</b></li>
+  <ul>
+  <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/c8c7f09d-79e0-4426-a47c-c937947b3eba" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+  </ul>
+  <li>Typing in commands such as <i>username, pwd, or sudo apt</i> will display traffic on Wireshark, you can filter ssh traffic in Wireshark by typing in <b>ssh</b> in the filter bar</li>
+</ul>
+</p>
+
+<br />
