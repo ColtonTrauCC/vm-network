@@ -27,7 +27,7 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 <h2>List of Prerequisites</h2>
 <ol>
   <li>Microsoft Azure Account and Subscription</li>
-  <li>Access to Microsoft Remote Desktop</li>
+  <li>Access to Microsoft Remote Desktop Connection</li>
   <ul>
     <li>For MacOS users, follow <a href = "https://www.youtube.com/watch?v=0lllpAhgAJs&ab_channel=TheHostingVideos">this video</a> to use Remote Desktop on Mac</li>
   </ul>
@@ -78,11 +78,22 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 
 <br />
 
-<h3>Logging into a Virtual Machine using Remote Desktop</h3>
+<h3>Logging into a Virtual Machine using Remote Desktop Connection</h3>
 
 <p>
   <ul>
-   <li></li>
+   <li>Through <b>Azure Services</b>, go to <b>Virtual Machines</b> and select VM-1 we've created and click on <b>Connect</b> to connect to the VM, from this page you can obtain the <b>Public IP Address</b> which we will use to connect to it via Remote Desktop Connection</li>
+    <ul>
+      <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/f38f8254-73c7-42a4-8b31-2bd3d328cff1" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    </ul>
+    <li>Copy the address and paste it into Remote Desktop Connection and click on <b>Connect</b> and log in using the username and password you set up for VM-1 (a pop up may show up for verification, just click on "Yes" if it does)</li>
+    <ul>
+      <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/8ebbf47a-ec01-414e-8757-3eb272491e35" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    </ul>
+    <li>You are now successfully logged into your VM!</li>
+    <ul>
+      <li><img src="https://github.com/ColtonTrauCC/vm-network/assets/147654000/a42e65d9-f9e3-4059-a04e-de51bb335d85" height="80%" width="80%" alt="Disk Sanitization Steps"/></li>
+    </ul>
   </ul>
 </p>
 
