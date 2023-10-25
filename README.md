@@ -180,6 +180,8 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
   </ul>
 </p>
 
+<br/>
+
 <h3>Observing RDP (Remote Desktop Protocol) Traffic</h3>
 
 <p>
