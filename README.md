@@ -186,7 +186,7 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 
 <p>
   <ul>
-    <li>Filter RDP traffic in Wireshark by entering <b>dns</b> in the filter bar and you'll notice non-stop traffic</li>
+    <li>Filter RDP traffic in Wireshark by entering <b>tcp.port == 3389</b> in the filter bar and you'll notice non-stop traffic</li>
     <li>This is because the RDP is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted</li>
   </ul>
 </p>
