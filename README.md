@@ -171,6 +171,13 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
 
 <br />
 
+<h3>Observer DHCP (Dynamic Host Configuration Protocol) Traffic</h3>
+
+<p>
+  <ul>Filter DHCP Traffic in Wireshark by entering <b>dhcp</b> in the filter bar</ul>
+  <ul>DHCP assigns IP Addresses to devices new to the network the moment said device joins the network. We can reassign an IP Address in the VM by going to Powershell an enterning the command <b>ipconfig /renew</b></ul>
+</p>
+
 <h3>Observing DNS (Domain Name System) Traffic</h3>
 
 <p>
