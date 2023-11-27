@@ -178,6 +178,8 @@ This tutorial outlines how to set up an Virtual Machine Network in Microsoft Azu
   <ul>DHCP assigns IP Addresses to devices new to the network the moment said device joins the network. We can reassign an IP Address in the VM by going to Powershell an enterning the command <b>ipconfig /renew</b></ul>
 </p>
 
+<br/>
+
 <h3>Observing DNS (Domain Name System) Traffic</h3>
 
 <p>
